@@ -1,0 +1,133 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script type="text/javascript" src="js/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/application/utils/Window.js"></script>
+    <script type="text/javascript" src="js/application/utils/String.js"></script>
+    <script type="text/javascript" src="js/application/main/Manager.js"></script>
+    <script type="text/javascript" src="js/application/template.js"></script>
+    <script type="text/javascript" src="js/application/buttons.js"></script>
+    <script type="text/javascript" src="js/application/sync/MovieSyncManager.js"></script>
+    <script type="text/javascript" src="js/application/movie/Movie.js"></script>
+    <script type="text/javascript" src="js/application/movie/MovieConstants.js"></script>
+    <script type="text/javascript" src="js/application/movie/MovieNameParser.js"></script>
+    <script type="text/javascript" src="js/application/movie/MovieWatchManager.js"></script>
+    <script type="text/javascript" src="js/application/movie/MovieManager.js"></script>
+</head>
+<body>
+<div class="page_container">
+	
+	<div class="page_buttons_container clearfix">
+		<span class="ellipsis" id="page_title"></span>
+		<div class="page_button" id="btn_close"></div>
+		<div class="page_button" id="btn_settings"></div>
+	</div>
+
+	<div class="page_inner_container">
+
+        <!-- START PAGE -->
+        <div class="start_page_container page page_active" id="start_page">
+            <!-- Recent Searches -->
+            <div class="recent_searches_container clearfix">
+                <div class="recent_searches_header">
+                    <h3>Recent Searches</h3>
+                    <a id="view_all_recent_searches">(View All)</a>
+                    <a id="clear_search_history">(Clear)</a>
+                </div>
+                <div class="recent_searches clearfix"></div>
+                <hr>
+            </div>
+            <!-- Search box -->
+            <div class="search_box_container">
+                <div class="header clearfix">
+                    <h3>Search Movie</h3>
+                </div>
+                <input type="text" name="movie_name" id="start_page_movie_search_text_box" placeholder="Type movie name..." value="" />
+                <button id="btn_start_page_search_movie">Search Movie</button>
+            </div>
+            <hr>
+            <!-- Login -->
+            <div class="login_container">
+                <a href="#">Login for movie suggestions and more</a>
+            </div>
+
+        </div>
+
+        <!-- LOADING PAGE -->
+        <div class="loading_container page" id="loading_page">
+            <span id="loading_text"></span>
+        </div>
+
+        <!-- ERROR PAGE -->
+		<div class="error_container page" id="error_page">
+			<span id="error_text"></span>
+			<button id="btn_try_again">Try Again</button>
+		</div>
+
+        <!-- POSSIBLE MOVIES PAGE -->
+		<div class="possible_movies_container page" id="possible_movies_page">
+			<div id="movie_info_text"></div>
+			<div class="possible_movies_list"></div>
+            <hr>
+			<div class="custom_input_container">
+				<input type="text" name="custom_movie" id="try_with_custom_name_text" placeholder="Type your movie name here..." value="" />
+				<button id="btn_try_with_custom_name">Try with this name!</button>
+			</div>	
+		</div>
+
+        <!-- MOVIE INFO PAGE -->
+		<div class="movie_info_container page" id="movie_info_page">
+			<div class="movie_image_properties_container">
+				<div class="movie_image_container">
+					<img id="movie_image" alt="Movie Image" title="Show in IMDB" />
+					<div class="loading_image_container">
+						<img class="loading_image" src="images/loading.gif" />
+					</div>
+				</div>
+				<div class="movie_properties_container">
+					<div class="movie_property">
+						<h3>Title:</h3>
+						<span class="ellipsis" id="title"></span>
+					</div>
+					<div class="movie_property">
+						<h3>Year:</h3>
+						<span class="ellipsis" id="year"></span>
+					</div>
+					<div class="movie_property">
+						<h3>Runtime:</h3>
+						<span class="ellipsis" id="runtime"></span>
+					</div>
+					<div class="movie_property">
+						<h3>Genre:</h3>
+						<span class="ellipsis" id="genre"></span>
+					</div>
+					<div class="movie_property">
+						<h3>Director:</h3>
+						<span class="ellipsis" id="director"></span>
+					</div>
+					<div class="movie_property">
+						<h3>Rating:</h3>
+						<span class="ellipsis" id="rating"></span>
+					</div>
+					<div class="movie_property">
+						<h3>Votes:</h3>
+						<span class="ellipsis" id="votes"></span>
+					</div>
+				</div>
+			</div>
+			<div class="movie_plot_container">
+				<span id="movie_plot"></span>
+			</div>
+			<div class="info_buttons_container">
+				<button class="info_button" id="btn_watch_movie">Watch Online</button>
+				<button class="info_button no_margin_right" id="btn_find_subtitle">Find Subtitle</button>
+				<button class="info_button" id="btn_watch_trailer">Watch Trailer</button>
+				<button class="info_button no_margin_right" id="btn_show_in_imdb">Show in IMDB</button>
+				<button class="info_button no_margin_right" id="btn_not_this_movie">Not This Movie?</button>
+			</div>
+		</div>
+	</div>	
+</div>
+</body>
+</html>

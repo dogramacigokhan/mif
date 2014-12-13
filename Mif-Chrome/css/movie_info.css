@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+/* CSS Document
+Author: K.Gokhan Dogramaci
+Mail: dogramacigokhan@gmail.com;
+*/
+
+/* RESET */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, form, label, legend {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;background: transparent;}
+html { }
+.ui-effects-transfer { border: 1px dotted #9BC1C9; }
+ol, ul { list-style: none }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
+:focus { outline: 0 }
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+table {empty-cells:show;}
+
+/* ELLIPSIS */
+.oflw { text-overflow: ellipsis; -o-text-overflow:ellipsis; width:90%; white-space:nowrap; overflow:hidden;}
+.ellipsis { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; -o-text-overflow:ellipsis; -moz-binding:url('/Assets/Xml/ellipsis.xml#ellipsis'); }
+p.ellipsis { margin:0; padding:0; }
+.truncate { white-space:nowrap; text-overflow:ellipsis; overflow:hidden; -moz-binding: url(/Assets/Xml/ellipsis.xml#ellipsis); display:block}
+.containProb:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+
+a { text-decoration: none; }
+a:visited { color: #c5c8c5; }
+a img {border: 0;}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #8f8985;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #8f8985;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #8f8985;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #8f8985;
+}
+.clearfix:after {content:'.';display:block;height:0;clear:both;visibility:hidden}
+.clearfix {display:inline-block}
+/* \ */
+.clearfix {display:block}
+/* END OF RESET */
+
+body {
+	overflow: hidden;
+	width: 380px;
+	max-width: 380px;
+	min-width: 380px;
+	font-family: "Arial Verdana";
+}
+
+#movie_img_attr_container {
+	width: 100%;
+	padding: 10px;
+}
+
+#movie_img_container {
+	float: left;
+	width: 120px;
+}
+
+#movie_img_container img {
+	width: 120px;
+	height: 176px;
+}
+
+#movie_attr_container {
+	float: left;
+	width: 240px;
+	padding: 0 10px;
+	position: relative;
+	top: 5px;
+}
+
+.attr {
+	display: block;
+	clear: both;
+}
+
+.attr h3 {
+	float: left;
+	font-size: 20px;
+}
+
+.attr span {
+	font-size: 18px;
+	position: relative;
+	top: 2px;
+	left: 2px;
+}
+
+#movie_plot_container {
+	display: block;
+	clear: both;
+	width: 100%;
+	padding: 10px;
+	font-size: 18px;
+}
+
+#info_buttons_container {
+	width: 100%;
+	padding: 0 10px 10px 10px;
+}
+
+#info_buttons_container button {
+	float: left;
+	width: 185px;
+	height: 30px;
+	cursor: pointer;
+	margin: 0 5px 5px 0;
+}
+
+.no_margin_right {
+	margin-right: 0;
+}
